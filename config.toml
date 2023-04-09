@@ -1,62 +1,60 @@
-baseurl = "https://www.example.com"
+baseURL = "https://JeongYunSung.github.io/"
 title = "JeongYunSung"
-theme = "hugo-coder"
-languagecode = "en"
-defaultcontentlanguage = "en"
+paginate = 5
+theme = "PaperMod"
+enableEmoji = true
+defaultContentLanguage = "ko"
 
-paginate = 20
+[languages.ko]
+languageName = "Korean"
+weight = 1
 
-[markup.highlight]
-style = "github-dark"
+[languages.ko.taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[[languages.ko.menu.main]]
+name = "Post"
+url = "posts"
+weight = 1
+
+[[languages.ko.menu.main]]
+name = "Archive"
+url = "archives"
+weight = 5
+
+[[languages.ko.menu.main]]
+name = "Search"
+url = "search/"
+weight = 10
+
+[[languages.ko.menu.main]]
+name = "Tags"
+url = "tags/"
+weight = 10
 
 [params]
+env = "production"
 author = "JeongYunSung"
-info = "BackEnd & DevOps Engineer"
-description = "JeongYunSung's Blog"
-keywords = "blog,developer,personal"
-avatarurl = "images/avatar.jpg"
+comments = true
+ShowToc = true
+ShowReadingTime = true
+ShowBreadCrumbs = true
+ShowPostNavLinks = true
+ShowCodeCopyButtons = true
 
-favicon_32 = "images/favicon.png"
-favicon_16 = "images/favicon.png"
+[params.homeInfoParams]
+Title = "JeongYunSung"
+Content = """
+안녕하세요.
+"""
 
-commit = "https://github.com/JeongYunSung/go"
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/JeongYunSung"
 
-since = 2023
-
-enableTwemoji = true
-
-colorScheme = "auto"
-hidecolorschemetoggle = false
-
-[taxonomies]
-category = "categories"
-series = "series"
-tag = "tags"
-author = "authors"
-
-# Social links
-[[params.social]]
-name = "Github"
-icon = "fa fa-github fa-2x"
-weight = 1
-url = "https://github.com/johndoe/"
-[[params.social]]
-name = "Gitlab"
-icon = "fa fa-gitlab fa-2x"
-weight = 2
-url = "https://gitlab.com/johndoe/"
-[[params.social]]
-name = "Twitter"
-icon = "fa fa-twitter fa-2x"
-weight = 3
-url = "https://twitter.com/johndoe/"
-
-# Menu links
-[[menu.main]]
-name = "Blog"
-weight = 1
-url  = "posts/"
-[[menu.main]]
-name = "About"
-weight = 2
-url = "about/"
+[params.editPost]
+URL = "https://github.com/JeongYunSung/blog/content"
+Text = "수정 제안"
+appendFilePath = true
